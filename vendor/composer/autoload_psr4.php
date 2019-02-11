@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Vbot\\Tuling\\' => array($vendorDir . '/vbot/tuling/src'),
     'Vbot\\Http\\' => array($vendorDir . '/vbot/http/src'),
     'Vbot\\HotGirl\\' => array($vendorDir . '/vbot/hot-girl/src'),
     'Vbot\\GuessNumber\\' => array($vendorDir . '/vbot/guess-number/src'),

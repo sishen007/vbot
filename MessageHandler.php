@@ -5,6 +5,7 @@ namespace Hanson\MyVbot;
 use Hanson\MyVbot\Handlers\Contact\ColleagueGroup;
 use Hanson\MyVbot\Handlers\Contact\ExperienceGroup;
 use Hanson\MyVbot\Handlers\Contact\FeedbackGroup;
+use Hanson\MyVbot\Handlers\Contact\GroupSend;
 use Hanson\MyVbot\Handlers\Contact\Hanson;
 use Hanson\MyVbot\Handlers\Type\RecallType;
 use Hanson\MyVbot\Handlers\Type\TextType;
@@ -48,25 +49,26 @@ class MessageHandler
          * @var Groups $groups
          */
         $groups = vbot('groups');
-        /**
-         * 测试 相亲相爱一家人群
-         */
-        if ($message['from']['NickName'] === self::GROUP_NICK_NAME) {
-            vbot('console')->log('群消息==:' . json_encode($message->toArray()));
-            Hanson::messageHandler($message, $friends, $groups);
-        } else {
 
-            //vbot('console')->log('非群消息==:'.json_encode($message->toArray()));
-        }
-//
+        // 一键拜年
+//        GroupSend::messageHandler($message, $friends, $groups);
 
-
+        // 发送各个消息测试
 //        Hanson::messageHandler($message, $friends, $groups);
+
+        // 群组信息(群机器人可以在这里部署)
 //        ColleagueGroup::messageHandler($message, $friends, $groups);
+
+        // 体验群聊
 //        FeedbackGroup::messageHandler($message, $friends, $groups);
+
+        // Vbot 体验群
 //        ExperienceGroup::messageHandler($message, $friends, $groups);
-//
+
+        // 消息
 //        TextType::messageHandler($message, $friends, $groups);
+
+        // 防撤回
 //        RecallType::messageHandler($message);
 
         /**

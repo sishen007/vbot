@@ -20,6 +20,7 @@ class ComposerStaticInit92e0700a7c3f070641619dce0d5d2461
     public static $prefixLengthsPsr4 = array (
         'V' => 
         array (
+            'Vbot\\Tuling\\' => 12,
             'Vbot\\Http\\' => 10,
             'Vbot\\HotGirl\\' => 13,
             'Vbot\\GuessNumber\\' => 17,
@@ -77,6 +78,10 @@ class ComposerStaticInit92e0700a7c3f070641619dce0d5d2461
     );
 
     public static $prefixDirsPsr4 = array (
+        'Vbot\\Tuling\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vbot/tuling/src',
+        ),
         'Vbot\\Http\\' => 
         array (
             0 => __DIR__ . '/..' . '/vbot/http/src',

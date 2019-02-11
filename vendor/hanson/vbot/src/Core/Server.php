@@ -288,6 +288,17 @@ class Server
     }
 
     /**
+     * @desc 获取所有的好友列表 by sishen007 add
+     * @return array
+     */
+    public function getFriendsList(){
+        if(empty($this->vbot->friends->toArray())){
+            $this->vbot->contactFactory->fetchAllContacts();
+        }
+        return $this->vbot->friends->toArray();
+    }
+
+    /**
      * open wechat status notify.
      */
     protected function statusNotify()

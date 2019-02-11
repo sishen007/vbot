@@ -6,6 +6,7 @@ use Hanson\Vbot\Foundation\Vbot as Bot;
 use Vbot\Blacklist\Blacklist;
 use Vbot\GuessNumber\GuessNumber;
 use Vbot\HotGirl\HotGirl;
+use Vbot\Tuling\Tuling;
 
 class Example
 {
@@ -34,29 +35,33 @@ class Example
         $robot->messageHandler->setHandler([MessageHandler::class, 'messageHandler']);
         /**
          * 一直触发  如何获取所有的联系人....
+         * 为当 Vbot 向微信服务器请求查询是否有最新消息时，
+         * 无论是否有新消息都会触发，触发周期最长为 35 秒一次
          */
-        $robot->messageHandler->setCustomHandler(function () use($robot) {
+//        $robot->messageHandler->setCustomHandler(function () use($robot) {
 //            $contactFactory = $robot->contactFactory->fetchAllContacts();
-            $friends = vbot('friends')->get(0);
+//            $friends = vbot('friends')->get(0);
 //            $whiteList = ['死神007', 'Y'];
 //            $blackList = [];
 //            // 获取联系人列表
-            $friends->each(function ($item, $username) {
-                // 发送白名单
+//            $friends->each(function ($item, $username) {
+                  // 发送白名单
 //                if ($item['RemarkName'] && in_array($item['RemarkName'], $whiteList)) {
 ////                    Text::send($username, $item['RemarkName'] . ' 新年快乐');
 ////                    sleep(2);
 //                }
-                vbot('console')->log('获取联系人列表==:' . json_encode($item));
-                sleep(2);
-            });
-        });
-//        $robot->messageExtension->load([
-//            // some extensions
+//                vbot('console')->log('获取联系人列表==:' . json_encode($item));
+//                sleep(2);
+//            });
+//        });
+
+        $robot->messageExtension->load([
+            // some extensions
 //            Blacklist::class,
-//            GuessNumber::class,
-//             HotGirl::class,
-//        ]);
+            GuessNumber::class,
+//             HotGirl::class, 访问不了网站了
+        Tuling::class,// 图灵机器人
+        ]);
 
         /**
          * 获取监听器实例: $robot->observer

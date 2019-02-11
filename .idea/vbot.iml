@@ -38,6 +38,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/vbot/guess-number" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vbot/hot-girl" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vbot/http" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vbot/tuling" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

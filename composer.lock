@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c52d2f61deca350896ea897239b1e8ce",
+    "content-hash": "8e6f332ce91332a1b8f900941c0ca823",
     "packages": [
         {
             "name": "aferrandini/phpqrcode",
@@ -1823,6 +1823,50 @@
                 "http"
             ],
             "time": "2017-06-19T17:50:31+00:00"
+        },
+        {
+            "name": "vbot/tuling",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpvbot/tuling.git",
+                "reference": "fdb87e5e499af8f70014e821ca03c792b5c45355"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpvbot/tuling/zipball/fdb87e5e499af8f70014e821ca03c792b5c45355",
+                "reference": "fdb87e5e499af8f70014e821ca03c792b5c45355",
+                "shasum": ""
+            },
+            "require": {
+                "vbot/http": "^1.0"
+            },
+            "require-dev": {
+                "hanson/vbot": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Vbot\\Tuling\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Xuefeng",
+                    "email": "i@oiuv.cn"
+                }
+            ],
+            "description": "Vbot 自动聊天机器人",
+            "keywords": [
+                "Vbot",
+                "图灵机器人",
+                "聊天机器人"
+            ],
+            "time": "2017-10-23T11:50:03+00:00"
         }
     ],
     "packages-dev": [],
