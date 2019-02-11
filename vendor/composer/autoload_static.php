@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit7a24fa8a9eb8c9f0c40b91378e5d5fa3
+class ComposerStaticInit92e0700a7c3f070641619dce0d5d2461
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -14,15 +14,26 @@ class ComposerStaticInit7a24fa8a9eb8c9f0c40b91378e5d5fa3
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'c355e0897882ebe62200c783fabb8783' => __DIR__ . '/..' . '/hanson/vbot/src/Support/helpers.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'V' => 
+        array (
+            'Vbot\\Http\\' => 10,
+            'Vbot\\HotGirl\\' => 13,
+            'Vbot\\GuessNumber\\' => 17,
+            'Vbot\\Blacklist\\' => 15,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Contracts\\' => 18,
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\Finder\\' => 25,
+            'Symfony\\Component\\DomCrawler\\' => 29,
+            'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
         ),
         'P' => 
@@ -51,6 +62,7 @@ class ComposerStaticInit7a24fa8a9eb8c9f0c40b91378e5d5fa3
         'H' => 
         array (
             'Hanson\\Vbot\\' => 12,
+            'Hanson\\MyVbot\\' => 14,
         ),
         'G' => 
         array (
@@ -65,9 +77,29 @@ class ComposerStaticInit7a24fa8a9eb8c9f0c40b91378e5d5fa3
     );
 
     public static $prefixDirsPsr4 = array (
+        'Vbot\\Http\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vbot/http/src',
+        ),
+        'Vbot\\HotGirl\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vbot/hot-girl/src',
+        ),
+        'Vbot\\GuessNumber\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vbot/guess-number/src',
+        ),
+        'Vbot\\Blacklist\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vbot/blacklist/src',
+        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
         'Symfony\\Contracts\\' => 
         array (
@@ -80,6 +112,14 @@ class ComposerStaticInit7a24fa8a9eb8c9f0c40b91378e5d5fa3
         'Symfony\\Component\\Finder\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/finder',
+        ),
+        'Symfony\\Component\\DomCrawler\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/dom-crawler',
+        ),
+        'Symfony\\Component\\CssSelector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/css-selector',
         ),
         'Symfony\\Component\\Console\\' => 
         array (
@@ -145,6 +185,10 @@ class ComposerStaticInit7a24fa8a9eb8c9f0c40b91378e5d5fa3
         array (
             0 => __DIR__ . '/..' . '/hanson/vbot/src',
         ),
+        'Hanson\\MyVbot\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/',
+        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -180,10 +224,10 @@ class ComposerStaticInit7a24fa8a9eb8c9f0c40b91378e5d5fa3
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit7a24fa8a9eb8c9f0c40b91378e5d5fa3::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit7a24fa8a9eb8c9f0c40b91378e5d5fa3::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit7a24fa8a9eb8c9f0c40b91378e5d5fa3::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit7a24fa8a9eb8c9f0c40b91378e5d5fa3::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit92e0700a7c3f070641619dce0d5d2461::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit92e0700a7c3f070641619dce0d5d2461::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit92e0700a7c3f070641619dce0d5d2461::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit92e0700a7c3f070641619dce0d5d2461::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

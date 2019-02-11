@@ -6,10 +6,17 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Vbot\\Http\\' => array($vendorDir . '/vbot/http/src'),
+    'Vbot\\HotGirl\\' => array($vendorDir . '/vbot/hot-girl/src'),
+    'Vbot\\GuessNumber\\' => array($vendorDir . '/vbot/guess-number/src'),
+    'Vbot\\Blacklist\\' => array($vendorDir . '/vbot/blacklist/src'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'Symfony\\Contracts\\' => array($vendorDir . '/symfony/contracts'),
     'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
     'Symfony\\Component\\Finder\\' => array($vendorDir . '/symfony/finder'),
+    'Symfony\\Component\\DomCrawler\\' => array($vendorDir . '/symfony/dom-crawler'),
+    'Symfony\\Component\\CssSelector\\' => array($vendorDir . '/symfony/css-selector'),
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
     'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
@@ -26,6 +33,7 @@ return array(
     'Illuminate\\Config\\' => array($vendorDir . '/illuminate/config'),
     'Illuminate\\Cache\\' => array($vendorDir . '/illuminate/cache'),
     'Hanson\\Vbot\\' => array($vendorDir . '/hanson/vbot/src'),
+    'Hanson\\MyVbot\\' => array($baseDir . '/'),
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
     'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
